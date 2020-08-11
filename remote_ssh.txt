@@ -1,0 +1,4 @@
+Host google_colab_ssh
+		HostName 0.tcp.ngrok.io
+		User root
+		Port 14930
