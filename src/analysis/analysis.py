@@ -103,6 +103,8 @@ for col_no,col in enumerate(["context","response","stimuli"]):
         wcss.append(kmeans.inertia_)
 
     sns.lineplot(x=range(1, 80),y=wcss,color=['tomato',"turquoise","darkblue"][col_no],ax=axs)
+    kmeans = KMeans(n_clusters=25, init='k-means++', max_iter=300, n_init=10, random_state=0)
+    kmeans.fit(list(X.values))
     df[col+"_cluster"]=list(kmeans.labels_)
 plt.legend(labels=['context', 'response', 'stimuli'])
 

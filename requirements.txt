@@ -1,4 +1,4 @@
-nlptriples==0.1.3
+nlptriples==0.1.7
 benepar[cpu]
 tensorflow==1.11.0
 sentence-transformers
